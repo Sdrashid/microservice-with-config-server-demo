@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>MicroService For RD and FD</title>
+<head>
+<body>
+Amount : <input type="text" id="amount" value="1">
+<br>
+<br>
+Years : <input type="text" id="years" value="1">
+<br>
+<br>
+<button onclick="getRD()">Get RD</button>
+<br>
+<br>
+<button onclick="getFD()">Get FD</button>
+
+<script>
+function getRD() {
+  var amount = document.getElementById("amount").value;
+  var years = document.getElementById("years").value;
+  window.location.href = "http://localhost:8181/rdCalculator/amount/" + amount + "/years/"+ years;
+}
+function getFD() {
+	var amount = document.getElementById("amount").value;
+    var years = document.getElementById("years").value;
+	window.location.href = "http://localhost:8080//fdCalculator/amount/" + amount + "/years/"+ years;
+}
+
+</script>
+
+</body>
+</html>
